@@ -1,7 +1,23 @@
-
 //lee la pulsacion de el espacio
 document.addEventListener("keydown",(evento)=>{
     if(evento.keyCode==32){
+        console.log("salta");
+        if(nivel.muerto==false){
+            if(trex.saltando==false){
+        saltar();}}
+        else{
+            nivel.velocidad=9;
+            nube.velocidad=1;
+            cactus.x=ancho+100;
+            nube.x=ancho+100;
+            nivel.muerto=false
+            nivel.marcador=0;
+        }
+    }
+});
+
+document.addEventListener("click",(evento)=>{
+    if(evento){
         console.log("salta");
         if(nivel.muerto==false){
             if(trex.saltando==false){
